@@ -10,7 +10,7 @@ Pull the latest version of the repo and run the following command to install all
 
 ### To serve locally
 
-`bundle exec jekyll serve --livereload`
+`bundle exec jekyll serve --livereload` and navigate to http://localhost:4000
 
 
 ### Deployment
