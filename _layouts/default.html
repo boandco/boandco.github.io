@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>{{ site.title }} | {{ page.title }}</title>
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <meta charset="UTF-8">
+    <meta name="description" content="{{ site.description }}">
+    <meta name="keywords" content="{{ site.keywords }}">
+    <meta name="author" content="{{ site.author }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="logo">
+        <a href="/">
+          {% if page.title == 'Studio' %}
+            <h1 class="heading">Bo & Co</h1>
+          {% else %}
+            <p class="heading">Bo & Co</p>
+          {% endif %}
+          <p class="sub">Studio</p>
+        </a>
+      </div>
+
+      {{ page.content }}
+
+      <a class="btn primary center" href="mailto:{{site.email}}">Work with us</a>
+      <p class="copyright">&copy; 2021 Bo & Co.</p>
+    </div>
+  </body>
+</html>

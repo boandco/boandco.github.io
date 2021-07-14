@@ -1,0 +1,136 @@
+---
+
+---
+
+$color-black: #0F0F0F;
+$color-main: #FF8744;
+$color-white: #FFFFFF;
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Black.woff') format('woff'), url('/fonts/Satoshi-Black.woff2') format('woff2');
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Bold.woff') format('woff'), url('/fonts/Satoshi-Bold.woff2') format('woff2');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Medium.woff') format('woff'), url('/fonts/Satoshi-Medium.woff2') format('woff2');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Eiko';
+  src: url('/fonts/PPEiko-Medium.woff') format('woff'), url('/fonts/PPEiko-Medium.woff2') format('woff2');
+  font-weight: 500;
+}
+
+body {
+  background: $color-black;
+  color: $color-white;
+  font-family: 'Satoshi', Arial, Helvetica, sans-serif;
+}
+
+.center {
+  margin: auto;
+}
+
+.wrapper {
+  width: 90%;
+  margin: auto;
+}
+
+.logo {
+  text-align: center;
+  margin-top: 2em;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .heading {
+    font-size: 1.4em;
+    font-weight: 600;
+    margin: 0;
+  }
+  .sub {
+    font-size: 0.4em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin: 0;
+  }
+}
+
+a.btn,
+button.btn {
+  padding: 0.8em 2em;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  display: block;
+  width: fit-content;
+
+  &.primary {
+    background: $color-main;
+    color: $color-black;
+  }
+}
+
+p.copyright {
+  font-size: 0.8em;
+  text-align: center;
+  margin: 4em auto 2em;
+  color: lighten($color-black, 40);
+}
+
+.intro_heading {
+  text-align: center;
+  position: relative;
+  margin: 4em auto;
+  max-width: 500px;
+
+  h2 {
+    font-size: 7em;
+    font-family: 'Eiko', serif;
+    font-weight: 500;
+  }
+
+  .additional {
+    position: absolute;
+    color: $color-main;
+    bottom: 0;
+    right: -130px;
+    font-weight: 500;
+
+    .arrow {
+      position: relative;
+      top: -20px;
+      right: -20px;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    max-width: 300px;
+    margin: 4em auto 6em;
+    h2 {
+      font-size: 4em;
+    }
+    .additional {
+      right: 80px;
+      bottom: -50px;
+
+      .arrow {
+        right: -165px;
+        top: -5px;
+
+        svg {
+          transform: rotate(130deg);
+        }
+      }
+    }
+  }
+}
