@@ -1,0 +1,19 @@
+{
+  "name": "boandco.github.io",
+  "version": "1.0.0",
+  "description": "The portfolio site for agency Bo & Co.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boandco/boandco.github.io.git"
+  },
+  "author": "Connell McCarthy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/boandco/boandco.github.io/issues"
+  },
+  "homepage": "https://github.com/boandco/boandco.github.io#readme"
+}
