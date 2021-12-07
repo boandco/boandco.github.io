@@ -17,6 +17,15 @@
     <meta name="twitter:description" content="{{ site.description }}">
     <meta name="twitter:image" content="{{ site.url }}/images/social-share.jpg">
     <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="preload" href="/fonts/Satoshi-Black.woff" as="font">
+    <link rel="preload" href="/fonts/Satoshi-Black.woff2" as="font">
+    <link rel="preload" href="/fonts/Satoshi-Bold.woff" as="font">
+    <link rel="preload" href="/fonts/Satoshi-Bold.woff2" as="font">
+    <link rel="preload" href="/fonts/Satoshi-Medium.woff" as="font">
+    <link rel="preload" href="/fonts/Satoshi-Medium.woff2" as="font">
+    <link rel="preload" href="/fonts/PPEiko-Medium.woff" as="font">
+    <link rel="preload" href="/fonts/PPEiko-Medium.woff2" as="font">
   </head>
   <body>
     <div class="wrapper">
@@ -31,9 +40,8 @@
         </a>
       </div>
 
-      {{ page.content }}
+      {{ content }}
 
-      <a class="btn primary center" href="mailto:{{site.email}}">Work with us</a>
       <p class="copyright">&copy; 2021 Bo & Co.</p>
     </div>
   </body>

@@ -2,9 +2,11 @@
 
 ---
 
-$color-black: #0F0F0F;
-$color-main: #FF8744;
-$color-white: #FFFFFF;
+$color-text: #232323;
+$color-black: #0E0E0E;
+$color-main: #1145FF;
+$color-white: #F8F8F8;
+$border-radius: 20px;
 
 @font-face {
   font-family: 'Satoshi';
@@ -27,19 +29,48 @@ $color-white: #FFFFFF;
   font-weight: 500;
 }
 
+* {
+  box-sizing: border-box;
+}
 body {
-  background: $color-black;
-  color: $color-white;
+  background: $color-white;
+  color: $color-text;
   font-family: 'Satoshi', Arial, Helvetica, sans-serif;
 }
 
 .center {
   margin: auto;
+  text-align: center;
 }
 
 .wrapper {
   width: 90%;
+  max-width: 1000px;
   margin: auto;
+}
+
+.section {
+  padding: 3em 1em;
+  width: 100%;
+  margin: 1em auto;
+  border-radius: $border-radius;
+
+  &.grey {
+    background: #F4F4F4;
+    border: 1px solid #E9E9E9;
+  }
+}
+
+.muted {
+  color: lighten($color-text, 30);
+}
+.large {
+  font-size: 1.8em;
+  font-weight: 500;
+
+  @media screen and (max-width: 768px) {
+    font-size: 1.4em;
+  }
 }
 
 .logo {
@@ -67,23 +98,38 @@ body {
 
 a.btn,
 button.btn {
-  padding: 0.8em 2em;
+  padding: 0.7em 2em;
   border-radius: 50px;
   text-decoration: none;
   font-weight: 600;
   display: block;
   width: fit-content;
+  box-shadow: 0px 12px 20px -6px rgba(71, 111, 255, 0);
+  transition: transform 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6), box-shadow 0.3s ease-in-out, background 0.3s ease-in-out;
 
   &.primary {
     background: $color-main;
-    color: $color-black;
+    color: $color-white;
+
+    &:hover {
+      background: lighten($color-main, 5);
+    }
+    &:focus,
+    &:active {
+      background: darken($color-main, 20);
+      outline: 3px solid darken($color-main, 40);
+    }
+  }
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 12px 20px -6px rgba(71, 111, 255, 0.6);
   }
 }
 
 p.copyright {
   font-size: 0.8em;
   text-align: center;
-  margin: 4em auto 2em;
+  margin: 4em auto;
   color: lighten($color-black, 40);
 }
 
@@ -91,25 +137,102 @@ p.copyright {
   text-align: center;
   position: relative;
   margin: 4em auto;
-  max-width: 500px;
+  max-width: 100%;
 
   h2 {
-    font-size: 7em;
+    font-size: 4em;
     font-family: 'Eiko', serif;
     font-weight: 500;
   }
 
-  .additional {
-    position: absolute;
-    color: $color-main;
-    bottom: 0;
-    right: -130px;
-    font-weight: 500;
+  span.draw {
+    position: relative;
+    z-index: 1;
 
-    .arrow {
-      position: relative;
-      top: -20px;
-      right: -20px;
+    svg {
+      position: absolute;
+      width: 110%;
+      bottom: -10px;
+      left: -20px;
+      z-index: -1;
+      stroke-dasharray: 700;
+      stroke-dashoffset: 700;
+      animation: draw 2s cubic-bezier(0.87, 0, 0.13, 1) forwards;
+
+      @media screen and (max-width: 768px) {
+        bottom: -20px;
+      }
+    }
+    @keyframes draw {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+  }
+
+  span.asterisk {
+    position: relative;
+    line-height: 0;
+    width: 0;
+    display: inline-block;
+    animation: asterisk 1s linear infinite;
+    cursor: help;
+    z-index: 2;
+
+    &:hover {
+      animation-play-state: paused;
+
+      &:after {
+        transform: translate(-40%, 0);
+        opacity: 1;
+        @media screen and (max-width: 768px) {
+          transform: translate(-80%, 0);
+        }
+      }
+    }
+
+    &:after {
+      content: attr(data-tooltip);
+      font-size: 12px;
+      display: block;
+      width: 110px;
+      height: auto;
+      font-family: 'Satoshi', Arial, Helvetica, sans-serif;
+      font-style: italic;
+      position: absolute;
+      bottom: -40px;
+      left: 0;
+      transform: translate(-40%, 5px);
+      background: $color-black;
+      color: $color-white;
+      box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.20);
+      padding: 1.4em 1em;
+      border-radius: 40px;
+      z-index: 2;
+      pointer-events: none;
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
+
+      @media screen and (max-width: 768px) {
+        transform: translate(-80%, 5px);
+      }
+    }
+  }
+  @keyframes asterisk {
+    0% {
+      font-family: 'Eiko';
+    }
+    25% {
+      font-family: 'Satoshi';
+    }
+    50% {
+      font-family: 'Times New Roman', Times, serif;
+    }
+    75% {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    100% {
+      font-family: 'Eiko';
     }
   }
 
@@ -117,20 +240,48 @@ p.copyright {
     max-width: 300px;
     margin: 4em auto 6em;
     h2 {
-      font-size: 4em;
+      font-size: 3em;
     }
-    .additional {
-      right: 80px;
-      bottom: -50px;
+  }
+}
+.about {
 
-      .arrow {
-        right: -165px;
-        top: -5px;
+  .location-image {
+    position: relative;
+    margin: auto;
+    height: 100px;
+    width: 100px;
+    margin-bottom: 1em;
+    
+    img {
+      height: 100%;
+      width: 100%;
+      border-radius: 100%;
+    }
 
-        svg {
-          transform: rotate(130deg);
-        }
-      }
+    &__tag {
+      position: absolute;
+      background: $color-white;
+      height: 40px;
+      width: 40px;
+      border-radius: 100%;
+      border: 0.5px solid #DEDEDE;
+      box-shadow: 0px 3.33333px 8.33333px -3.33333px rgba(0, 0, 0, 0.11);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-size: 1.4em;
+      bottom: -5px;
+      right: -5px;
+    }
+  }
+  p {
+    margin: 0;
+
+    &:last-of-type {
+      margin: 0.2em 0;
+      font-size: 0.9em;
     }
   }
 }
