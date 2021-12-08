@@ -3,4 +3,6 @@ work:
     type: Development
     url: https://connormurphydesign.com
     image: connor-murphy.jpg
+    image_back: dark
+    description: Web development work for Connor Murphy, a designer working at Shopify.
     display: false
