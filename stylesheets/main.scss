@@ -12,21 +12,25 @@ $border-radius: 20px;
   font-family: 'Satoshi';
   src: url('/fonts/Satoshi-Black.woff') format('woff'), url('/fonts/Satoshi-Black.woff2') format('woff2');
   font-weight: 700;
+  font-display: swap;
 }
 @font-face {
   font-family: 'Satoshi';
   src: url('/fonts/Satoshi-Bold.woff') format('woff'), url('/fonts/Satoshi-Bold.woff2') format('woff2');
   font-weight: 600;
+  font-display: swap;
 }
 @font-face {
   font-family: 'Satoshi';
   src: url('/fonts/Satoshi-Medium.woff') format('woff'), url('/fonts/Satoshi-Medium.woff2') format('woff2');
   font-weight: 500;
+  font-display: swap;
 }
 @font-face {
   font-family: 'Eiko';
   src: url('/fonts/PPEiko-Medium.woff') format('woff'), url('/fonts/PPEiko-Medium.woff2') format('woff2');
   font-weight: 500;
+  font-display: swap;
 }
 
 * {
@@ -130,7 +134,7 @@ p.copyright {
   font-size: 0.8em;
   text-align: center;
   margin: 4em auto;
-  color: lighten($color-black, 40);
+  color: lighten($color-black, 30);
 }
 
 .intro_heading {
