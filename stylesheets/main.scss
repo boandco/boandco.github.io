@@ -376,10 +376,6 @@ a.project-link {
       z-index: -2;
       transition: transform 0.4s ease;
       transform: scale(1.1);
-
-      @media screen and (max-width: 768px) {
-        object-fit: contain;
-      }
     }
   }
 
