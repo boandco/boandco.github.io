@@ -12,13 +12,23 @@ title: 'Studio'
 {% assign projects = site.data.content.work | where: "display", true %}
 {% for project in projects %}
   <a class="project-link" href="{{ project.url }}" target="_blank" rel="noopener">
-    <div class="section project {{ project.image_back }}" {% if project.background %}style="background-color: #{{ project.background }} !important"{% endif %}>
+    <div class="section project {{ project.image_back }}">
       <div class="info">
         <p>{{ project.title }}</p>
         <p>{{ project.type }}</p>
       </div>
       <div class="pill">Visit website {% include external-arrow.html %}</div>
-      <img height="500px" src="/images/{{ project.image }}" alt="{{ project.description }}">
+      <video id="video-{{ forloop.index }}" height="500px" muted loop preload="auto" alt="{{ project.description }}" poster="/images/{{ project.image }}">
+        <source src="/images/{{ project.video }}" type="video/webm">
+      </video>
+      <script>
+        document.getElementById('video-{{ forloop.index }}').addEventListener('mouseenter', () => {
+          document.getElementById('video-{{ forloop.index }}').play();
+        });
+        document.getElementById('video-{{ forloop.index }}').addEventListener('mouseleave', () => {
+          document.getElementById('video-{{ forloop.index }}').pause();
+        });
+      </script>
     </div>
   </a>
 {% endfor %}
