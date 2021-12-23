@@ -37,6 +37,11 @@
     <link rel="preload" href="/fonts/Satoshi-Medium.woff2" as="font" crossOrigin="anonymous" >
     <link rel="preload" href="/fonts/PPEiko-Medium.woff" as="font" crossOrigin="anonymous" >
     <link rel="preload" href="/fonts/PPEiko-Medium.woff2" as="font" crossOrigin="anonymous" >
+
+    {% assign project_load = site.data.content.work | where: "display", true %}
+    {% for project in project_load %}
+      <link rel="preload" href="/images/{{ project.image }}" as="image" >
+    {% endfor %}
   </head>
   <body>
     <div class="wrapper">

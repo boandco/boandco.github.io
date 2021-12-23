@@ -1,8 +1,9 @@
 work:
   - title: Connor Murphy
     type: Development
-    url: https://connormurphydesign.com
+    url: https://connormurphy.design
     image: connor-murphy.jpg
+    video: connor-murphy.webm
     image_back: dark
     description: Web development work for Connor Murphy, a designer working at Shopify.
-    display: false
+    display: true

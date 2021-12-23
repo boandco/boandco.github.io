@@ -32,7 +32,7 @@ a.btn.primary:hover, button.btn.primary:hover { background: #2b59ff; }
 a.btn.primary:focus, a.btn.primary:active, button.btn.primary:focus, button.btn.primary:active { background: #0025aa; outline: 3px solid #000f44; }
 a.btn:hover, button.btn:hover { transform: scale(1.1); box-shadow: 0px 12px 20px -6px rgba(71, 111, 255, 0.6); }
 
-p.copyright { font-size: 0.8em; text-align: center; margin: 4em auto 4em; color: #5b5b5b; }
+p.copyright { font-size: 0.8em; text-align: center; margin: 2em auto 4em; color: #5b5b5b; }
 
 .intro_heading { text-align: center; position: relative; margin: 4em auto; max-width: 100%; }
 .intro_heading h2 { font-size: 4em; font-family: 'Eiko', serif; font-weight: 500; }
@@ -67,14 +67,14 @@ a.project-link .project.dark { color: #F8F8F8; background: #232323; }
 a.project-link .project.dark p:last-of-type { color: #b8b8b8; }
 a.project-link .project.light { color: #232323; background: #ebebeb; }
 a.project-link .project.light p:last-of-type { color: #636363; }
+a.project-link .project .info { pointer-events: none; }
 a.project-link .project .info p { margin: 0; }
 a.project-link .project .info p:first-of-type { font-weight: 600; }
 a.project-link .project .info p:last-of-type { font-size: 0.8em; }
 @media screen and (max-width: 768px) { a.project-link .project { min-height: 330px; padding: 1.4em; } }
-a.project-link .project img { width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: -2; transition: transform 0.4s ease; transform: scale(1.1); }
-@media screen and (max-width: 768px) { a.project-link .project img { object-fit: contain; } }
+a.project-link .project img, a.project-link .project video { width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: -2; transition: transform 0.4s ease; transform: scale(1.1); }
 a.project-link:hover .project { box-shadow: 0px 80px 120px -80px black; transform: scale(1.05); }
-a.project-link:hover .project img { transform: scale(1); }
+a.project-link:hover .project img, a.project-link:hover .project video { transform: scale(1); }
 a.project-link:hover .project .pill { transform: translateY(0); opacity: 1; }
 
 .pill { font-size: 0.8em; display: block; height: fit-content; width: fit-content; background: #0E0E0E; color: #F8F8F8; box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.2); padding: 0.6em 1em; border-radius: 40px; transition: all 0.4s ease-in-out; opacity: 0; transform: translateY(15px); }
