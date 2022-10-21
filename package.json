@@ -4,7 +4,8 @@
   "description": "The portfolio site for agency Bo & Co.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "bundle exec jekyll serve --livereload"
   },
   "repository": {
     "type": "git",

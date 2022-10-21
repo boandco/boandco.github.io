@@ -131,6 +131,11 @@ button.btn {
   box-shadow: 0px 12px 20px -6px rgba(71, 111, 255, 0);
   transition: transform 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6), box-shadow 0.3s ease-in-out, background 0.3s ease-in-out;
 
+  span.wave {
+    display: inline-block;
+    transform-origin: 80% 70%;
+  }
+
   &.primary {
     background: $color-main;
     color: $color-white;
@@ -147,6 +152,22 @@ button.btn {
   &:hover {
     transform: scale(1.1);
     box-shadow: 0px 12px 20px -6px rgba(71, 111, 255, 0.6);
+
+    span.wave {
+      animation-name: wave;
+      animation-timing-function: linear;
+      animation-duration: 0.3s;
+      animation-iteration-count: 2;
+  
+      @keyframes wave {
+        0%,100% {
+          transform: rotate(0deg);
+        }
+        50% {
+          transform: rotate(45deg);
+        }
+      }
+    }
   }
 }
 
