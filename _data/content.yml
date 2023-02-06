@@ -1,9 +1,65 @@
+services:
+  items:
+    - title: Digital Products
+      items:
+        - title: Web Design & Development
+        - title: Interaction & User Experience
+    - title: 3D Rendering
+      items:
+        - title: Photo-realistic Rendering
+        - title: 3D Animation
+    - title: Photography
+      items:
+        - title: Engagement Photography
+        - title: Portraits & Lifestyle
+    - title: Video Production
+      items:
+        - title: Cinematography
+        - title: Motion Graphics
+    - title: Audio Production
+      items:
+        - title: Sound Design
+        - title: Music Production & Composition
+values:
+  items:
+    - title: Quick turnaround times
+      icon: clock
+    - title: Flexible revision cycles
+      icon: pen-to-square
+    - title: Industry quality deliverables
+      icon: file-check
+    - title: Post-launch follow-up support
+      icon: user-headset
 work:
+  - title: Journey 10X
+    type: Web Development
+    url: https://journey10x.com
+    image: 10x.jpg
+    image_back: dark
+    pill: light
+    description: Web development work for Journey 10X, an agency that empowers, uplifts, and inspires.
+    external: true
+    display: true
   - title: Connor Murphy
-    type: Development
+    type: Web Development
     url: https://connormurphy.design
     image: connor-murphy.jpg
     video: connor-murphy.webm
     image_back: dark
+    pill: light
     description: Web development work for Connor Murphy, a designer working at Shopify.
+    external: true
     display: true
+    award:
+      title: Honorable Mention
+      year: 2022
+      source: Awwwards.com
+testimonials:
+  - quote: “Working with Bo & Co was an amazing experience. Their innovative ideas and close collaboration truly brought my project to life.”
+    client: Connor Murphy
+    job_title: Digital Designer
+    image: connor-murphy.jpg
+  - quote: “TBD”
+    client: Mark VanMoorsel
+    job_title: Art Director, Valt Creative
+    image: valt.png

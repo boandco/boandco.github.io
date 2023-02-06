@@ -1,0 +1,15 @@
+<div class="wrapper section services">
+  <h2 class="muted" data-aos="fade">Our services</h2>
+  <ul class="services__list">
+    {% for service in site.data.content.services.items %}
+      <li class="services__list__item">
+        <span id="{{ service.title | replace: '3', 'three' | replace: ' ', '_' | downcase }}" class="title text-animate" data-aos>{{ service.title }}</span>
+        <div class="services__list__item__tags">
+          {% for item in service.items %}
+            <span class="pill mono white" data-aos="fade">{{ item.title }}</span>
+          {% endfor %}
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

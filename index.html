@@ -1,38 +1,20 @@
 ---
 layout: default
-title: 'Studio'
+title: 'Creative Studio'
 ---
 
-<div class="intro_heading">
-  <h2>We build 
-    <span class="draw">beautiful {% include circle.html %}</span>
-    <span class="asterisk" data-tooltip="At least we think so" aria-hidden="true">*</span><br> websites and products.</h2>
+<div class="hero">
+  <div class="wrapper">
+    <p id="hero" class="large text-animate" data-aos>{{ site.description }}</p>
+  </div>
+  <div class="showreel">
+    <div class="controls">Pause Reel</div>
+    <img src="/images/showreel.jpg">
+  </div>
 </div>
 
-{% assign projects = site.data.content.work | where: "display", true %}
-{% for project in projects %}
-  <a class="project-link" href="{{ project.url }}" target="_blank" rel="noopener">
-    <div class="section project {{ project.image_back }}">
-      <div class="info">
-        <p>{{ project.title }}</p>
-        <p>{{ project.type }}</p>
-      </div>
-      <div class="pill">Visit website {% include external-arrow.html %}</div>
-      <video id="video-{{ forloop.index }}" height="500px" muted loop preload="auto" alt="{{ project.description }}" poster="/images/{{ project.image }}">
-        <source src="/images/{{ project.video }}" type="video/webm">
-      </video>
-      <script>
-        document.getElementById('video-{{ forloop.index }}').addEventListener('mouseenter', () => {
-          document.getElementById('video-{{ forloop.index }}').play();
-        });
-        document.getElementById('video-{{ forloop.index }}').addEventListener('mouseleave', () => {
-          document.getElementById('video-{{ forloop.index }}').pause();
-        });
-      </script>
-    </div>
-  </a>
-{% endfor %}
-
-{% include contact-block.html %}
-{% include about-block.html %}
-
+{% include sections/services.html %}
+{% include sections/values.html %}
+{% include sections/work.html %}
+{% include sections/customers.html %}
+{% include sections/contact.html %}
