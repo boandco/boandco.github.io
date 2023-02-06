@@ -68,7 +68,7 @@ a.project-link .project.dark { color: #FFF; background: #242424; }
 a.project-link .project.dark .project-info { background: rgba(14, 14, 14, 0.8); }
 a.project-link .project.dark p:last-of-type { color: #bfbfbf; }
 a.project-link .project.light { color: #242424; background: #f2f2f2; }
-a.project-link .project.light .project-info { background: #FFF; }
+a.project-link .project.light .project-info { background: rgba(238, 238, 238, 0.8); }
 a.project-link .project.light p:last-of-type { color: #646464; }
 a.project-link .project .pill { opacity: 0; transform: translateY(15px); }
 @media screen and (max-width: 768px) { a.project-link .project .pill { opacity: 1; transform: unset; } }

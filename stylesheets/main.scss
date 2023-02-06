@@ -317,7 +317,7 @@ a.project-link {
     }
     &.light {
       .project-info {
-        background: $color-white;
+        background: rgba($color-grey, 0.8);
       }
       color: $color-text;
       background: darken($color-white, 5);
