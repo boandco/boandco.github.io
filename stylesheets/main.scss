@@ -136,13 +136,13 @@ h2 {
       width: 8px;
       background: #4EC14E;
       border-radius: 50%;
-      animation: blink 1s linear infinite alternate;
+      animation: blink 2s linear infinite forwards;
       flex-shrink: 0;
       @keyframes blink {
-        from {
+        0%, 100% {
           opacity: 0.5;
         }
-        to {
+        50% {
           opacity: 1;
         }
       }

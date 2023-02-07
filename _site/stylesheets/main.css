@@ -33,9 +33,9 @@ h2 { font-size: 1em; font-weight: 500; }
 .navigation { display: grid; grid-template-columns: 20% auto 20%; align-items: center; padding: 2em 0; }
 .navigation .logo { justify-self: center; }
 .navigation .status { display: flex; align-items: center; justify-content: flex-start; gap: 0.4em; white-space: nowrap; }
-.navigation .status .indicator { height: 8px; width: 8px; background: #4EC14E; border-radius: 50%; animation: blink 1s linear infinite alternate; flex-shrink: 0; }
-@keyframes blink { from { opacity: 0.5; }
-  to { opacity: 1; } }
+.navigation .status .indicator { height: 8px; width: 8px; background: #4EC14E; border-radius: 50%; animation: blink 2s linear infinite forwards; flex-shrink: 0; }
+@keyframes blink { 0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; } }
 .navigation .status p { margin: 0; font-size: 0.9em; }
 .navigation .nav-cta { justify-self: flex-end; }
 @media screen and (max-width: 768px) { .navigation .nav-cta a.btn { height: 48px; width: 48px; display: flex; justify-content: center; align-items: center; } }
