@@ -1,0 +1,60 @@
+<script>
+  document.querySelectorAll('.text-animate').forEach(function(e) {
+    e.innerHTML = e.innerHTML.replace(/(?!<*b*r*>)\S*[^\s]/g, `<span class="letter">$&</span>`);
+    document.querySelectorAll(`.text-animate#${ e.getAttribute('id') } span.letter`).forEach((e, index) => {
+      e.setAttribute(`style`, `--delay: ${ index * 0.1 / 40 }s`);
+    })
+  });
+  AOS.init({
+    offset: 0
+  });
+
+  const iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+  const iPad = !!(navigator.userAgent.match(/(iPad)/) || (navigator.platform === "MacIntel" && typeof navigator.standalone !== "undefined"));
+
+  var moveControls = true;
+
+  if (iOS || iPad) {
+    moveControls = false;
+  }
+
+  if (moveControls) {
+    var showreel = document.querySelector('.showreel');
+    var controls = document.querySelector('.showreel .controls');
+  
+    var mouseX = showreel.clientWidth/2,
+        mouseY = showreel.clientHeight/2;
+  
+    var cursor = {
+      el: document.querySelector('.showreel .controls'),
+      x: showreel.clientWidth/2,
+      y: showreel.clientHeight/2,
+      w: 0,
+      h: 0,
+      update: function() {
+        l = this.x - this.w/2;
+        t = this.y - this.h/2;
+        this.el.style.transform = `translate3d(${l}px,${t}px,0)`;
+      }
+    }
+    showreel.addEventListener('mouseenter', () => {
+      controls.classList.add('active');
+    });
+    showreel.addEventListener('mouseleave', () => {
+      controls.classList.remove('active');
+    });
+    showreel.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    });
+    setInterval(move,1000/60);
+    function move() {
+      cursor.x = lerp (cursor.x, mouseX, 0.1);
+      cursor.y = lerp (cursor.y, mouseY, 0.1);
+      cursor.update();
+    }
+    function lerp (start, end, amt) {
+      return (1-amt)*start+amt*end;
+    }
+  }
+</script>

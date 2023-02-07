@@ -1,0 +1,12 @@
+<div class="wrapper section values">
+  <ul class="values__list" data-aos="fade">
+    {% for item in site.data.content.values.items %}
+      <li class="values__list__item">
+        <div class="icon">
+          <i class="far fa-{{ item.icon }}"></i>
+        </div>
+        <p>{{ item.title }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

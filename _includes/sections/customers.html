@@ -1,0 +1,22 @@
+<div class="wrapper section customers">
+  <div class="heading">
+    <svg class="star" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0.200051 0.871782C-0.0174774 0.441053 0.441035 -0.0174586 0.871763 0.20007L7.77458 3.68617C7.91632 3.75775 8.08364 3.75775 8.22538 3.68617L15.1282 0.20007C15.5589 -0.0174593 16.0174 0.441054 15.7999 0.871783L12.3138 7.7746C12.2422 7.91634 12.2422 8.08366 12.3138 8.2254L15.7999 15.1282C16.0174 15.5589 15.5589 16.0175 15.1282 15.7999L8.22538 12.3138C8.08364 12.2422 7.91632 12.2422 7.77458 12.3138L0.871763 15.7999C0.441034 16.0175 -0.0174771 15.5589 0.200052 15.1282L3.68615 8.2254C3.75773 8.08366 3.75773 7.91634 3.68615 7.7746L0.200051 0.871782Z" fill="#242424"/>
+    </svg>
+    <p id="customers" class="large text-animate" data-aos>We work tirelessly to bring our clients' vision to life, combining technical expertise with a deep understanding of aesthetics to produce truly unique and impactful solutions.</p>
+  </div>
+  <div class="testimonials">
+    {% for testimonial in site.data.content.testimonials limit: 2 %}
+      <div class="testimonials__item" data-aos="fade">
+        <div class="icon">
+          <img src="/images/customers/{{ testimonial.image }}">
+        </div>
+        <div class="content">
+          <p class="quote">{{ testimonial.quote }}</p>
+          <p class="client">{{ testimonial.client }}</p>
+          <p class="muted job-title">{{ testimonial.job_title }}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
