@@ -447,6 +447,7 @@ a.project-link {
     padding-top: 10vh;
   }
   .showreel {
+    background: $color-grey;
     width: 100%;
     height: auto;
     position: relative;
@@ -530,7 +531,7 @@ a.project-link {
       object-fit: cover;
       position: relative;
       z-index: 1;
-      // margin-bottom: -6px;
+      margin-bottom: -6px;
     }
   }
 }
