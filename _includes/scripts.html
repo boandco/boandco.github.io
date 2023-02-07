@@ -57,5 +57,14 @@
       return (1-amt)*start+amt*end;
     }
   }
-
+  var showreel = document.getElementById('showreel');
+  showreel.addEventListener('click', () => {
+    if (showreel.paused) {
+      controls.innerHTML = 'Pause Reel';
+      showreel.play();
+    } else {
+      controls.innerHTML = 'Play Reel';
+      showreel.pause();
+    }
+  });
 </script>

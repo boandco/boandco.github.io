@@ -94,7 +94,7 @@ a.project-link:hover .project .pill { transform: translateY(0); opacity: 1; }
 .hero .showreel { background: #EEEEEE; width: 100%; height: auto; position: relative; z-index: 1; cursor: pointer; }
 .hero .showreel .controls { position: absolute; height: 120px; width: 120px; border-radius: 50%; display: flex; justify-content: center; align-items: center; background: #1145FF; color: #FFF; z-index: 2; pointer-events: none; opacity: 0; transition: opacity 0.4s ease; }
 .hero .showreel .controls.active { opacity: 1; }
-.hero .showreel img, .hero .showreel video { width: 100%; height: auto; object-fit: cover; position: relative; z-index: 1; }
+.hero .showreel img, .hero .showreel video { width: 100%; height: auto; object-fit: cover; position: relative; z-index: 1; margin-bottom: -6px; }
 
 .services { display: flex; justify-content: space-between; align-items: flex-start; }
 @media screen and (max-width: 768px) { .services { flex-direction: column; } }
