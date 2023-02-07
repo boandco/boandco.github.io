@@ -6,7 +6,7 @@
     <p id="customers" class="large text-animate" data-aos>We work tirelessly to bring our clients' vision to life, combining technical expertise with a deep understanding of aesthetics to produce truly unique and impactful solutions.</p>
   </div>
   <div class="testimonials">
-    {% for testimonial in site.data.content.testimonials %}
+    {% for testimonial in site.data.content.testimonials limit: 2 %}
       <div class="testimonials__item" data-aos="fade">
         <div class="icon">
           <img src="/images/customers/{{ testimonial.image }}">

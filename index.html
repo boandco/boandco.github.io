@@ -7,11 +7,32 @@ title: 'Creative Studio'
   <div class="wrapper">
     <p id="hero" class="large text-animate" data-aos>{{ site.description }}</p>
   </div>
-  <div class="showreel">
+  <div class="showreel" state="playing">
     <div class="controls">Pause Reel</div>
     <video id="showreel" muted loop autoplay playsinline preload="auto" poster="/images/showreel.jpg">
       <source src="/images/showreel.mp4" type="video/mp4">
     </video>
+    <button id="showreelTrigger">
+      <i class="fas fa-pause"></i>
+      <i class="fas fa-play"></i>
+      <span class="visually-hidden">Play/Pause video</span>
+    </button>
+    <script>
+      document.getElementById('showreelTrigger').addEventListener('click', () => {
+        var showreel_container = document.querySelector('.showreel');
+        var showreel = document.getElementById('showreel');
+        var video_controls = document.querySelector('.showreel .controls');
+        if (showreel_container.getAttribute('state') == 'paused') {
+          video_controls.innerHTML = 'Pause Reel';
+          showreel.play();
+          showreel_container.setAttribute('state', 'playing');
+        } else {
+          video_controls.innerHTML = 'Play Reel';
+          showreel.pause();
+          showreel_container.setAttribute('state', 'paused');
+        }
+      });
+    </script>
   </div>
 </div>
 

@@ -75,11 +75,32 @@
   <div class="wrapper">
     <p id="hero" class="large text-animate" data-aos>Bo & Co is a full-service creative studio that specializes in blending art and technology to create captivating digital experiences.</p>
   </div>
-  <div class="showreel">
+  <div class="showreel" state="playing">
     <div class="controls">Pause Reel</div>
     <video id="showreel" muted loop autoplay playsinline preload="auto" poster="/images/showreel.jpg">
       <source src="/images/showreel.mp4" type="video/mp4">
     </video>
+    <button id="showreelTrigger">
+      <i class="fas fa-pause"></i>
+      <i class="fas fa-play"></i>
+      <span class="visually-hidden">Play/Pause video</span>
+    </button>
+    <script>
+      document.getElementById('showreelTrigger').addEventListener('click', () => {
+        var showreel_container = document.querySelector('.showreel');
+        var showreel = document.getElementById('showreel');
+        var video_controls = document.querySelector('.showreel .controls');
+        if (showreel_container.getAttribute('state') == 'paused') {
+          video_controls.innerHTML = 'Pause Reel';
+          showreel.play();
+          showreel_container.setAttribute('state', 'playing');
+        } else {
+          video_controls.innerHTML = 'Play Reel';
+          showreel.pause();
+          showreel_container.setAttribute('state', 'paused');
+        }
+      });
+    </script>
   </div>
 </div>
 
@@ -292,12 +313,12 @@
     
       <div class="testimonials__item" data-aos="fade">
         <div class="icon">
-          <img src="/images/customers/valt.png">
+          <img src="/images/customers/smt.png">
         </div>
         <div class="content">
-          <p class="quote">“TBD”</p>
-          <p class="client">Mark VanMoorsel</p>
-          <p class="muted job-title">Art Director, Valt Creative</p>
+          <p class="quote">“Bo & Co's work allowed us to showcase our products in fun and imaginative ways that would have been cost prohibitive or even impossible using traditional means.”</p>
+          <p class="client">Steven Thomas</p>
+          <p class="muted job-title">Founder, Super Magic Taste</p>
         </div>
       </div>
     
@@ -373,8 +394,8 @@
       el: document.querySelector('.showreel .controls'),
       x: showreel.clientWidth/2,
       y: showreel.clientHeight/2,
-      w: 200,
-      h: 200,
+      w: 0,
+      h: 0,
       update: function() {
         l = this.x - this.w/2;
         t = this.y - this.h/2;
@@ -401,16 +422,6 @@
       return (1-amt)*start+amt*end;
     }
   }
-  var showreel = document.getElementById('showreel');
-  showreel.addEventListener('click', () => {
-    if (showreel.paused) {
-      controls.innerHTML = 'Pause Reel';
-      showreel.play();
-    } else {
-      controls.innerHTML = 'Play Reel';
-      showreel.pause();
-    }
-  });
 </script>
   </body>
 </html>

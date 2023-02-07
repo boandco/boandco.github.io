@@ -38,6 +38,7 @@ h2 { font-size: 1em; font-weight: 500; }
   to { opacity: 1; } }
 .navigation .status p { margin: 0; font-size: 0.9em; }
 .navigation .nav-cta { justify-self: flex-end; }
+@media screen and (max-width: 768px) { .navigation .nav-cta a.btn { height: 48px; width: 48px; display: flex; justify-content: center; align-items: center; } }
 
 .muted { color: #717171; }
 
@@ -63,7 +64,7 @@ a.project-link { color: inherit; text-decoration: none; display: flex; flex-dire
 @media screen and (max-width: 768px) { a.project-link { align-items: flex-start; } }
 a.project-link:focus-visible { outline: 3px solid #1145FF; }
 a.project-link .project { position: relative; min-height: 500px; width: 100%; overflow: hidden; box-shadow: 0px 0px 120px -80px rgba(0, 0, 0, 0); transition: transform 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6), box-shadow 0.4s ease; transform: scale(1); display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; position: relative; padding: 0; border-radius: 24px; }
-a.project-link .project .project-info { padding: 1em 2em; width: 100%; display: flex; justify-content: space-between; align-items: center; backdrop-filter: blur(10px); border-top: 1px solid rgba(255, 255, 255, 0.1); }
+a.project-link .project .project-info { padding: 1em 2em; width: 100%; display: flex; justify-content: space-between; align-items: center; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-top: 1px solid rgba(255, 255, 255, 0.1); }
 a.project-link .project.dark { color: #FFF; background: #242424; }
 a.project-link .project.dark .project-info { background: rgba(14, 14, 14, 0.8); }
 a.project-link .project.dark p:last-of-type { color: #bfbfbf; }
@@ -91,10 +92,19 @@ a.project-link:hover .project .pill { transform: translateY(0); opacity: 1; }
 .pill.light { background: #FFF; color: #0E0E0E; box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.2); }
 
 .hero { width: 100%; padding-top: 25vh; }
-.hero .showreel { background: #EEEEEE; width: 100%; height: auto; position: relative; z-index: 1; cursor: pointer; }
+@media screen and (max-width: 768px) { .hero { padding-top: 10vh; } }
+.hero .showreel { width: 100%; height: auto; position: relative; z-index: 1; }
+.hero .showreel[state="playing"] button svg.fa-play { display: none; }
+.hero .showreel[state="paused"] button svg.fa-pause { display: none; }
+.hero .showreel button { appearance: none; -webkit-appearance: none; background: transparent; cursor: pointer; position: absolute; top: 0; left: 0; height: 100%; width: 100%; border: none; z-index: 3; }
+.hero .showreel button svg { display: none; }
+.hero .showreel button:focus-visible { outline: 3px solid #1145FF; }
+@media screen and (max-width: 768px) { .hero .showreel button { position: absolute; height: 48px; width: 48px; display: flex; align-items: center; justify-content: center; border-radius: 50%; top: unset; left: 1em; bottom: 1em; background: #0E0E0E; color: #FFF; font-size: 1.2em; }
+  .hero .showreel button svg { display: inherit; } }
 .hero .showreel .controls { position: absolute; height: 120px; width: 120px; border-radius: 50%; display: flex; justify-content: center; align-items: center; background: #1145FF; color: #FFF; z-index: 2; pointer-events: none; opacity: 0; transition: opacity 0.4s ease; }
 .hero .showreel .controls.active { opacity: 1; }
-.hero .showreel img, .hero .showreel video { width: 100%; height: auto; object-fit: cover; position: relative; z-index: 1; margin-bottom: -6px; }
+@media screen and (max-width: 768px) { .hero .showreel .controls { display: none; } }
+.hero .showreel img, .hero .showreel video { backgorund: #EEEEEE; width: 100%; height: auto; object-fit: cover; position: relative; z-index: 1; }
 
 .services { display: flex; justify-content: space-between; align-items: flex-start; }
 @media screen and (max-width: 768px) { .services { flex-direction: column; } }
@@ -135,6 +145,7 @@ a.project-link:hover .project .pill { transform: translateY(0); opacity: 1; }
 .contact { background: #EEEEEE; padding: 10em 0; border-radius: 24px; overflow: hidden; position: relative; z-index: 1; }
 .contact p { margin-bottom: 0.5em; }
 .contact svg { display: block; position: absolute; left: 65%; bottom: 80%; transform: scale(6) rotate(-15deg); z-index: -1; stroke-dasharray: 700; stroke-dashoffset: 700; transition: 1s ease; }
+@media screen and (max-width: 768px) { .contact svg { transform: scale(4) rotate(-15deg); left: 90%; bottom: 70%; } }
 .contact.aos-animate svg { stroke-dashoffset: 0; }
 
 .footer { padding-bottom: 4em; display: flex; flex-direction: column; gap: 15em; }

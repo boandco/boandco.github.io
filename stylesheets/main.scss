@@ -154,6 +154,15 @@ h2 {
   }
   .nav-cta {
     justify-self: flex-end;
+    @media screen and (max-width: $break-mobile) {
+      a.btn {
+        height: 48px;
+        width: 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
   }
 }
 
@@ -302,6 +311,7 @@ a.project-link {
       justify-content: space-between;
       align-items: center;
       backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
       border-top: 1px solid rgba(255,255,255,0.1);
     }
 
@@ -433,13 +443,65 @@ a.project-link {
 .hero {
   width: 100%;
   padding-top: 25vh;
+  @media screen and (max-width: $break-mobile) {
+    padding-top: 10vh;
+  }
   .showreel {
-    background: $color-grey;
     width: 100%;
     height: auto;
     position: relative;
     z-index: 1;
-    cursor: pointer;
+
+    &[state="playing"] {
+      button svg.fa-play {
+        display: none;
+      }
+    }
+    &[state="paused"] {
+      button svg.fa-pause {
+        display: none;
+      }
+    }
+    
+    button {
+      appearance: none;
+      -webkit-appearance: none;
+      background: transparent;
+      cursor: pointer;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      border: none;
+      z-index: 3;
+
+      svg {
+        display: none;
+      }
+      &:focus-visible {
+        outline: 3px solid $color-main;
+      }
+      @media screen and (max-width: $break-mobile) {
+        position: absolute;
+        height: 48px;
+        width: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        top: unset;
+        left: 1em;
+        bottom: 1em;
+        background: $color-black;
+        color: $color-white;
+        font-size: 1.2em;
+
+        svg {
+          display: inherit;
+        }
+      }
+    }
     .controls {
       position: absolute;
       height: 120px;
@@ -457,14 +519,18 @@ a.project-link {
       &.active {
         opacity: 1;
       }
+      @media screen and (max-width: $break-mobile) {
+        display: none;
+      }
     }
     img, video {
+      backgorund: $color-grey;
       width: 100%;
       height: auto;
       object-fit: cover;
       position: relative;
       z-index: 1;
-      margin-bottom: -6px;
+      // margin-bottom: -6px;
     }
   }
 }
@@ -683,6 +749,11 @@ a.project-link {
     stroke-dasharray: 700;
     stroke-dashoffset: 700;
     transition: 1s ease;
+    @media screen and (max-width: $break-mobile) {
+      transform: scale(4) rotate(-15deg);
+      left: 90%;
+      bottom: 70%;
+    }
   }
   &.aos-animate {
     svg {

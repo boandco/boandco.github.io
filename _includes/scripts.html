@@ -29,8 +29,8 @@
       el: document.querySelector('.showreel .controls'),
       x: showreel.clientWidth/2,
       y: showreel.clientHeight/2,
-      w: 200,
-      h: 200,
+      w: 0,
+      h: 0,
       update: function() {
         l = this.x - this.w/2;
         t = this.y - this.h/2;
@@ -57,14 +57,4 @@
       return (1-amt)*start+amt*end;
     }
   }
-  var showreel = document.getElementById('showreel');
-  showreel.addEventListener('click', () => {
-    if (showreel.paused) {
-      controls.innerHTML = 'Pause Reel';
-      showreel.play();
-    } else {
-      controls.innerHTML = 'Play Reel';
-      showreel.pause();
-    }
-  });
 </script>
