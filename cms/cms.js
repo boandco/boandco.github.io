@@ -1,3 +1,7 @@
+const siteQuery = window.location.search
+const urlParams = new URLSearchParams(siteQuery)
+var siteID = urlParams.get('netlify_id')
+
 var readyString = `Site is live`
 var errorString = `Couldn't update site`
 var loadingString = `Updating site`
@@ -68,7 +72,7 @@ window.addEventListener('load', () => {
 
 function swapLink() {
   var xmlHttp = new XMLHttpRequest();
-  xmlHttp.open("GET", 'https://api.netlify.com/api/v1/sites/{{ site.netlify_id }}/deploys', true); // true for asynchronous 
+  xmlHttp.open("GET", `https://api.netlify.com/api/v1/sites/${siteID}/deploys`, true); // true for asynchronous 
   xmlHttp.send(null);
   xmlHttp.onreadystatechange = function() {
     if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
