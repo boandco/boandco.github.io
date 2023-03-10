@@ -1,0 +1,556 @@
+/* Branding overrides */
+body {
+  background: #f3f3f3;
+}
+a {
+  color: #1145FF;
+}
+/* Login */
+.css-15mesr9-IconWrapper-NetlifyCreditIcon {
+  display: none;
+}
+.css-n1lu6x-CustomIconWrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  height: fit-content;
+  width: 100px;
+}
+.css-1jhr3xj-LoginButton-button-default-gray-disabled {
+  background-color: #1145FF;
+  padding: 12px 24px;
+  border-radius: 50px;
+  height: unset;
+  box-shadow: none;
+  transition: transform 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6),box-shadow 0.3s ease-in-out,background-color 0.3s ease-in-out;
+  margin-top: 48px;
+}
+.css-1jhr3xj-LoginButton-button-default-gray-disabled:focus,
+.css-1jhr3xj-LoginButton-button-default-gray-disabled:hover {
+  background-color: #2b59ff;
+  transform: scale(1.05);
+  box-shadow: 0px 12px 20px -6px rgb(71 111 255 / 60%);
+}
+.css-13uf1zf-StyledLoader::after {
+  border-color: #1145FF transparent transparent;
+}
+/* Navigation */
+.css-npvq26-SidebarHeading {
+  display: none;
+}
+.css-6fxb8u-SearchContainer {
+  margin: 12px 12px 0;
+}
+.css-1blbyw7-SearchInput:focus {
+  box-shadow: 0px 0px 0px 2px inset #1145FF;
+}
+.css-y7r3-AppHeader {
+  box-shadow: none;
+  border-bottom: 1px solid #dadada;
+}
+.css-1hvrgvd-CollectionTopContainer-card-cardTop {
+  box-shadow: none;
+  background-color: transparent;
+  padding: 0;
+  width: unset;
+}
+.css-12b66la-AppHeaderContent {
+  position: relative;
+  max-width: unset;
+}
+.css-12b66la-AppHeaderContent nav {
+  padding-left: 100px;
+  position: relative;
+}
+.css-12b66la-AppHeaderContent::after {
+  content: '';
+  height: 50%;
+  width: 100px;
+  background: url('https://boandco.studio/images/logo.svg') no-repeat center;
+  background-size: contain;
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  transform: translateY(-50%);
+}
+@media screen and (max-width: 799px) {
+  .css-12b66la-AppHeaderContent nav {
+    padding-left: 90px;
+  }
+  .css-12b66la-AppHeaderContent::after {
+    width: 70px;
+  }
+}
+.css-d6cj8l-StyledDropdownButton-button-default-caret-caretDown-AppHeaderQuickNewButton-button-medium-gray {
+  display: none;
+}
+.css-1ftfnv3-PreviewButtonContainer a,
+.css-12yqrwa-AppHeaderNavLink-AppHeaderButton-button-buttonActive-buttonActive-buttonActive-buttonActive-AppHeaderButton.header-link-active,
+.css-104dqk8-AppHeaderButton-button-buttonActive-buttonActive-buttonActive-buttonActive-AppHeaderButton:hover,
+.css-12yqrwa-AppHeaderNavLink-AppHeaderButton-button-buttonActive-buttonActive-buttonActive-buttonActive-AppHeaderButton.header-link-active .ei6fm2r1,
+.css-104dqk8-AppHeaderButton-button-buttonActive-buttonActive-buttonActive-buttonActive-AppHeaderButton:hover .ei6fm2r1 {
+  color: #1145FF;
+}
+.css-u2webi-SidebarNavLink-sidebarNavLinkActive-SidebarNavLink {
+  color: rgb(123, 130, 144);
+  border-left-width: 3px;
+}
+.css-u2webi-SidebarNavLink-sidebarNavLinkActive-SidebarNavLink:hover,
+.css-u2webi-SidebarNavLink-sidebarNavLinkActive-SidebarNavLink:active,
+.css-u2webi-SidebarNavLink-sidebarNavLinkActive-SidebarNavLink.sidebar-active {
+  color: #1145FF;
+  background-color: #f3f6ff;
+  border-left-color: #1145FF;
+}
+.nc-collectionPage-sidebarLink i {
+    font-size: 19px;
+    line-height: 24px;
+    margin-left: -1px;
+}
+.css-1vur7zs-FieldLabel-fieldLabel {
+  background-color: #1145FF;
+}
+.css-3yr7zq-TextControl,
+.css-188efjc {
+  border: 2px solid #1145FF;
+}
+.css-1265b6l-TopBarContainer,
+.css-dxc55w-TopBar-StyledListItemTopBar-StyledListItemTopBar {
+  background-color: #f6f6f6;
+}
+.css-1cjg468 {
+  border-color: #f6f6f6;
+}
+.css-1gic66b-NestedObjectLabel {
+  background-color: #FFFFFF;
+  border: 2px solid #f6f6f6;
+}
+.css-cutcix-AddButton-button-widget {
+  background-color: #000;
+  color: #FFFFFF;
+  padding: 12px;
+}
+.css-bn4qgs-CollectionTopNewButton-button-default-gray {
+  background-color: #1145FF;
+  padding: 2px 24px;
+  height: unset;
+  transition: transform 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6),box-shadow 0.3s ease-in-out,background-color 0.3s ease-in-out;
+}
+.css-16i8k8l-UploadButton-button-default-disabled-button-gray {
+  background-color: #1145FF;
+}
+.css-1v1y2wn-Card {
+  border: 2px solid #1145FF;
+}
+.css-1fh4556-ViewControlsButton-button {
+  color: #1145FF;
+}
+.css-16i8k8l-UploadButton-button-default-disabled-button-gray:focus,
+.css-16i8k8l-UploadButton-button-default-disabled-button-gray:hover {
+  background-color: #2b59ff;
+}
+.css-bn4qgs-CollectionTopNewButton-button-default-gray:focus,
+.css-bn4qgs-CollectionTopNewButton-button-default-gray:hover {
+  background-color: #2b59ff;
+  transform: scale(1.05);
+  box-shadow: 0px 12px 20px -6px rgb(71 111 255 / 60%);
+}
+.css-zfnuhu-ToggleBackground-BooleanBackground {
+  background-color: #1145FF;
+}
+.css-153pmau-ToolbarButton-button-default-buttonMargin-noOverflow-PublishedButton-publishedButton {
+  background-color: #f3f6ff;
+  color: #1145FF;
+}
+.css-o6hjv6-StyledDropdownButton-button-default-caret-caretDown-DropdownButton-noOverflow-PublishButton,
+.css-16pehfe-StyledDropdownButton-button-default-caret-caretDown-DropdownButton-noOverflow-PublishedToolbarButton-publishedButton {
+  background-color: #1145FF;
+  color: #FFFFFF;
+}
+.css-1hu7ve8-button-dropdownItem-StyledMenuItem:hover {
+  background-color: #f3f6ff;
+  color: #1145FF;
+}
+.css-1u78kww-StyledWrapper-ToolbarDropdown-buttonMargin .ei6fm2r1 {
+  color: #1145FF;
+}
+.css-19jgu1s-ToolbarToggleLabel-ToolbarToggleLabel,
+.css-1wgdcls-ToolbarToggleLabel-ToolbarToggleLabel {
+  color: #1145FF;
+}
+.css-1uwwzhh-ToggleBackground {
+  background-color: #1145FF;
+}
+.css-8s5rs3-ToolbarContainer {
+  background-color: #f6f6f6;
+  border: 2px solid rgb(223, 223, 227);
+}
+.css-5wgw3f-ListCard-card {
+  width: 100%;
+  box-shadow: none;
+  margin: 0;
+  border-top: 1px solid #dadada;
+  border-radius: 0;
+}
+.css-5wgw3f-ListCard-card:first-of-type {
+  border-top: none;
+}
+.css-pyxbz6-CollectionContainer {
+  display: flex;
+  min-height: 100%;
+}
+.css-1gj57a0-SidebarContainer-card {
+  box-shadow: none;
+  border-radius: 0;
+  border-right: 1px solid #dadada;
+  z-index: 98;
+  position: sticky;
+  max-height: unset;
+  height: calc(100vh - 56px);
+  top: 56px;
+  left: 0;
+}
+.css-1f7nhiq-CollectionMain {
+  padding-left: 0;
+  max-width: 840px;
+  width: 100%;
+  padding: 0 2em;
+  margin: 2em auto;
+}
+.css-v758ki-AppMainContainer {
+  max-width: unset;
+}
+.css-pyxbz6-CollectionContainer {
+  margin: 0;
+}
+.css-p5sjac-CollectionControlsContainer {
+  width: unset;
+  background-color: #f6f6f6;
+  border-radius: 6px 6px 0 0;
+  padding: 12px;
+  border: 1px solid #dadada;
+}
+.css-882a4r-CardsGrid {
+  margin: 0;
+  border: 1px solid #dadada;
+  border-top: none;
+  border-radius: 0 0 6px 6px;
+  overflow: hidden;
+}
+.css-1t9i08i-ListCardLink {
+  position: relative;
+  transition: background-color 0.2s ease;
+}
+.css-1t9i08i-ListCardLink::after {
+  content: '\f044';
+  font: var(--fa-font-solid);
+  font-size: 1rem;
+  position: absolute;
+  right: 22px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.css-1t9i08i-ListCardLink:hover {
+  background-color: #f3f3f3;
+}
+.css-1t9i08i-ListCardLink:hover::after {
+  opacity: 1;
+}
+.css-1fh4556-ViewControlsButton-button .css-tg1x8v-IconWrapper,
+.css-1jfbwn6-ViewControlsButton-button .css-tg1x8v-IconWrapper {
+  width: 14px;
+  height: 14px;
+}
+.css-1fh4556-ViewControlsButton-button,
+.css-1jfbwn6-ViewControlsButton-button {
+  border: 1px solid #dadada;
+  padding: 8px;
+  box-shadow: 0px 1px 2px -1px rgb(0 0 0 / 20%), inset 0px 1px 2px -1px rgba(255,255,255,1);
+}
+.css-14aa6nw-StyledDropdownButton-button-default-caret-caretDown-Button-button-medium-grayText-ControlButton {
+  border: 1px solid #dadada;
+  padding: 1px 26px 1px 10px;
+  box-shadow: 0px 1px 2px -1px rgb(0 0 0 / 20%), inset 0px 1px 2px -1px rgba(255,255,255,1);
+  height: unset;
+  width: unset;
+}
+.css-1vitqlt-SearchResultContainer-card-cardTop {
+  max-width: unset;
+  width: 100%;
+  box-shadow: none;
+  border-radius: 0;
+  background-color: transparent;
+  padding: 0;
+}
+
+/* Mobile overrides */
+@media (max-width: 799px) {
+  aside.css-1gj57a0-SidebarContainer-card.el9l68m0 {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    top: unset;
+    left: 0;
+    border: 1px solid #dadada;
+    margin: 0;
+    border-radius: 4px;
+  }
+  .css-npvq26-SidebarHeading {
+    margin-top: 0;
+  }
+  .css-pyxbz6-CollectionContainer {
+    flex-direction: column;
+    padding: 1em;
+  }
+
+  .css-v758ki-AppMainContainer, .css-12b66la-AppHeaderContent {
+    min-width: 0;
+  }
+
+  .css-1f7nhiq-CollectionMain {
+    padding: 0;
+  }
+
+  .css-1hvrgvd-CollectionTopContainer-card-cardTop {
+    width: 100%;
+  }
+
+  /* Media */
+  .css-1f3mf5k-StyledModal {
+    padding: 15px;
+    grid-template-rows: 190px auto;
+  }
+
+  .css-svjxk-SearchContainer {
+    display: block;
+    width: 100%;
+  }
+
+  .css-smzvtl-LibraryTop {
+    flex-direction: column;
+  }
+
+  .css-3ifd9s-ActionsContainer {
+    text-align: center;
+  }
+
+  .css-1ih1y1j-LibraryTitle {
+    margin-bottom: 15px;
+  }
+
+  .css-2ptjc9-UpperActionsContainer {
+    display: inline-block;
+  }
+
+  .css-1qukh7n-DownloadButton-button-default-disabled-button {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .css-13rmovq-StyledUploadButton-button-default-disabled-button-gray {
+    margin-left: 10px;
+  }
+
+  .css-1hpjyse-DeleteButton-button-default-disabled-button-lightRed {
+    margin-top: 10px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .css-1s67tkf-InsertButton-button-default-disabled-button-green {
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+
+  .css-16796rj-LowerActionsContainer {
+    display: inline-block;
+    margin-top: 0;
+  }
+
+  .css-stmjdx-CardGridContainer  {
+    position: static;
+    overflow: visible;
+    width: 100%;
+    padding-top: 20px;
+  }
+  /* End Media */
+
+  /* Blog */
+  .css-hn3jn7-EditorContainer {
+    min-width: 0;
+    padding-top: 100px;
+  }
+
+  .css-2oej7z-ToolbarContainer {
+    height: 100px;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .css-osnbqe-ToolbarToggle {
+    flex-direction: column;
+  }
+  /* End Blog */
+
+  /* Optional */
+  span.Resizer.vertical {
+    display: none;
+  }
+
+  .Pane.vertical.Pane2 {
+    display: none;
+  }
+
+  .Pane.vertical.Pane1 {
+    width: 100% !important;
+  }
+
+  .css-1bqupl5-ViewControls.e1pxf6c47 {
+    display: none;
+  }
+
+  .SplitPane.css-7d7n9g-StyledSplitPane-card-splitPane.e1pxf6c41.vertical {
+    display: block !important;
+  }
+
+  .css-134r1tn-RowContainer.ebn7k121 {
+    display: block;
+  }
+
+  button.css-6ekon-ActionButton-button-default-disabled-button.eljtsap3 {
+    margin: 0 10px 0 0;
+    font-size: 12px;
+    padding: 0 10px;
+  }
+
+  .css-1o58c3b-ButtonsContainer.ebn7k122 {
+    text-align: left;
+  }
+
+  .css-134r1tn-RowContainer.ebn7k121 {
+    margin-top: 10px;
+  }
+
+  button.css-196hm3u-DeleteButton-button-default-disabled-button-lightRed.eljtsap1 {
+    margin: 0 10px 0 0;
+  }
+
+  button.css-d08ild-InsertButton-button-default-disabled-button-green.eljtsap2 {
+    margin-left: 0;
+  }
+
+  .css-1o58c3b-ButtonsContainer.ebn7k122 {
+    margin-top: 10px;
+  }
+
+  button.css-579ih7-ActionButton-button-default-disabled-button-gray-ActionButton.eljtsap3 {
+    margin: 0 10px 0 0;
+    font-size: 12px;
+    padding: 0 10px;
+  }
+
+  label.nc-fileUploadButton.css-1fb6kv1-UploadButton-button-default-disabled-button-gray.eljtsap0 {
+    margin-left: 0;
+  }
+
+  .ep5ukwb0.css-1f3mf5k-StyledModal {
+    width: calc(100% - 60px);
+    height: calc(100% - 60px);
+  }
+  .css-d6cj8l-StyledDropdownButton-button-default-caret-caretDown-AppHeaderQuickNewButton-button-medium-gray,
+  .css-e9z4u8-AppHeaderSiteLin,
+  .css-1ftfnv3-PreviewButtonContainer,
+  .css-e9z4u8-AppHeaderSiteLink {
+    display: none;
+  }
+  /* Navigation */
+  .css-12zz42a-AppHeaderNavList li {
+    border-right: 1px solid #dadada;
+    border-left: 1px solid #dadada;
+  }
+  .css-12zz42a-AppHeaderNavList li:last-of-type {
+    border-left: none;
+  }
+  .css-12yqrwa-AppHeaderNavLink-AppHeaderButton-button-buttonActive-buttonActive-buttonActive-buttonActive-AppHeaderButton,
+  .css-104dqk8-AppHeaderButton-button-buttonActive-buttonActive-buttonActive-buttonActive-AppHeaderButton {
+    width: 40px;
+    overflow: hidden;
+    display: block;
+    white-space: nowrap;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 0;
+    height: 55px;
+    color: transparent !important;
+  }
+  .css-abwcjt-ToolbarSectionBackLink-toolbarSection div:last-of-type {
+    display: none;
+  }
+  .css-179mynt-BackArrow {
+    margin-right: 0;
+  }
+  .css-g42qkj-ToolbarSubSectionFirst {
+    flex-direction: column;
+    gap: 6px;
+    align-items: flex-start;
+  }
+  .css-g42qkj-ToolbarSubSectionFirst div,
+  .css-g42qkj-ToolbarSubSectionFirst button {
+    margin: 0;
+  }
+  .css-hn3jn7-EditorContainer .css-1yf97rr-StyledWrapper.e1d27pw00 {
+    display: none;
+  }
+}
+
+/* Status indicator */
+.css-e9z4u8-AppHeaderSiteLink {
+  color: transparent;
+}
+.css-e9z4u8-AppHeaderSiteLink.loaded {
+  color: inherit;
+}
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+}
+.status-indicator .indicator {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  position: relative;
+  transition: 0.2s transform cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.status-indicator .indicator.ready {
+  background-color: #24c224;
+}
+.status-indicator .indicator.error {
+  background-color: #ff6b6b;
+}
+.status-indicator .indicator.loading {
+  border: 1px solid #dadada;
+  transform: scale(2);
+}
+.status-indicator .indicator.loading::after {
+  content: "";
+  height: 8px;
+  width: 8px;
+  border: 1px solid;
+  border-color: #1145FF transparent transparent;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: loadingSpinner 1s infinite linear;
+}
+@keyframes loadingSpinner {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  } to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
