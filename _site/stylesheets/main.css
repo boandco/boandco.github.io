@@ -33,9 +33,11 @@ h2 { font-size: 1em; font-weight: 500; }
 .navigation { display: grid; grid-template-columns: 20% auto 20%; align-items: center; padding: 2em 0; }
 .navigation .logo { justify-self: center; }
 .navigation .status { display: flex; align-items: center; justify-content: flex-start; gap: 0.4em; white-space: nowrap; }
-.navigation .status .indicator { height: 8px; width: 8px; background: #4EC14E; border-radius: 50%; animation: blink 2s linear infinite forwards; flex-shrink: 0; }
-@keyframes blink { 0%, 100% { opacity: 0.5; }
-  50% { opacity: 1; } }
+.navigation .status .indicator { height: 8px; width: 8px; background: #4fe64f; border-radius: 50%; position: relative; flex-shrink: 0; }
+.navigation .status .indicator:after { content: ""; position: absolute; background: #7cec7c; top: 50%; left: 50%; height: 100%; width: 100%; border-radius: 50%; transform: scale(0) translate(-50%, -50%); transform-origin: top left; z-index: -1; animation: blink 2s linear infinite forwards; }
+@keyframes blink { 0% { opacity: 0; transform: scale(0) translate(-50%, -50%); }
+  50% { opacity: 1; }
+  100% { opacity: 0; transform: scale(2.5) translate(-50%, -50%); } }
 .navigation .status p { margin: 0; font-size: 0.9em; }
 .navigation .nav-cta { justify-self: flex-end; }
 @media screen and (max-width: 768px) { .navigation .nav-cta a.btn { height: 48px; width: 48px; display: flex; justify-content: center; align-items: center; } }
@@ -104,7 +106,7 @@ a.project-link:hover .project .pill { transform: translateY(0); opacity: 1; }
 .hero .showreel .controls { position: absolute; height: 120px; width: 120px; border-radius: 50%; display: flex; justify-content: center; align-items: center; background: #1145FF; color: #FFF; z-index: 2; pointer-events: none; opacity: 0; transition: opacity 0.4s ease; }
 .hero .showreel .controls.active { opacity: 1; }
 @media screen and (max-width: 768px) { .hero .showreel .controls { display: none; } }
-.hero .showreel img, .hero .showreel video { backgorund: #EEEEEE; width: 100%; height: auto; object-fit: cover; position: relative; z-index: 1; margin-bottom: -6px; }
+.hero .showreel img, .hero .showreel video { background: #EEEEEE; width: 100%; height: auto; object-fit: cover; position: relative; z-index: 1; margin-bottom: -6px; }
 
 .services { display: flex; justify-content: space-between; align-items: flex-start; }
 @media screen and (max-width: 768px) { .services { flex-direction: column; } }
