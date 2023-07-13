@@ -25,6 +25,10 @@ body { background: #FAFAFA; color: #242424; font-family: 'Satoshi', Arial, Helve
 
 .wrapper { width: 90%; max-width: 1440px; margin: auto; }
 .wrapper.section { margin: 10em auto 0; }
+.wrapper.legal { max-width: 900px; margin: 5em auto; }
+.wrapper.legal h2 { font-size: 1.2em; font-weight: 600; }
+.wrapper.legal p.indent { margin-left: 2em; }
+.wrapper.legal .legal-contact p { margin: 0; }
 
 svg.external { transform: rotate(-45deg); }
 

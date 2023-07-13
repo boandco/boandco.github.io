@@ -106,6 +106,22 @@ body {
   &.section {
     margin: 10em auto 0;
   }
+  &.legal {
+    max-width: 900px;
+    margin: 5em auto;
+    h2 {
+      font-size: 1.2em;
+      font-weight: 600;
+    }
+    p.indent {
+      margin-left: 2em;
+    }
+    .legal-contact {
+      p {
+        margin: 0;
+      }
+    }
+  }
 }
 
 svg.external {

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include head.html %}
+    <meta name="robots" content="noindex">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="navigation">
+        <div></div>
+        <div class="logo">
+          <a href="/">
+            {% if page.title == 'Studio' %}
+              <h1 class="heading">Bo & Co</h1>
+            {% else %}
+              <p class="heading">Bo & Co</p>
+            {% endif %}
+            <p class="sub">Studio</p>
+          </a>
+        </div>
+        <div></div>
+      </div>
+    </div>
+    <div class="wrapper legal">
+      {{ content }}
+    </div>
+  </body>
+</html>
