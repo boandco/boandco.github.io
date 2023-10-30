@@ -1,44 +1,30 @@
 <div class="wrapper section projects">
   <h2 class="muted">Featured work</h2>
   <div class="projects__list">
-    {% assign projects = site.data.content.work | where: "display", true | limit: 2 %}
+    {% assign projects = site.data.content.work | where: "display", true %}
     {% for project in projects %}
-      <a class="projects__list__item project-link" href="{{ project.url }}" target="_blank" rel="noopener" data-aos="fade">
-        <div class="project {{ project.image_back }}">
-          <div class="project-info">
-            <div class="info">
-              <p>{{ project.title }}</p>
-              <p>{{ project.type }}</p>
-            </div>
-            <div class="pill {{ project.pill }}">Visit website <i class="far fa-arrow-right {% if project.external %}external{% endif %}"></i></div>
+      <a class="projects__list__item project-link" href="{{ project.url }}?ref=boandco.studio" target="_blank" rel="noopener" data-aos="fade">
+        <div class="project">
+          <div class="project__navigate {% if project.award %}has-award{% endif %}">
+            {% if project.award %}
+              <div class="award">
+                <div class="icon">
+                  {% include icons/award.html %}
+                </div>
+                <div class="info">
+                  <p class="muted">{{ project.award.title }}, {{ project.award.year }}</p>
+                  <p class="muted">{{ project.award.source }}</p>
+                </div>
+              </div>
+            {% endif %}
+            <div class="pill white"><span class="visually-hidden">Visit website</span> <i class="far fa-arrow-right {% if project.external %}external{% endif %}"></i></div>
           </div>
-          {% if project.video %}
-            <video id="video-{{ forloop.index }}" height="500px" muted loop preload="auto" alt="{{ project.description }}" poster="/images/work/{{ project.image }}">
-              <source src="/images/work/{{ project.video }}" type="video/webm">
-            </video>
-            <script>
-              document.getElementById('video-{{ forloop.index }}').addEventListener('mouseenter', () => {
-                document.getElementById('video-{{ forloop.index }}').play();
-              });
-              document.getElementById('video-{{ forloop.index }}').addEventListener('mouseleave', () => {
-                document.getElementById('video-{{ forloop.index }}').pause();
-              });
-            </script>
-          {% else %}
-            <img src="/images/work/{{ project.image }}" alt="{{ project.description }}">
-          {% endif %}
+          <img src="/images/work/{{ project.image }}" alt="{{ project.description }}">
+          <div class="info">
+            <p>{{ project.title }}</p>
+            <p class="muted">{{ project.type }}</p>
+          </div>
         </div>
-        {% if project.award %}
-          <div class="award">
-            <div class="icon">
-              {% include icons/award.html %}
-            </div>
-            <div class="info">
-              <p class="muted">{{ project.award.title }}, {{ project.award.year }}</p>
-              <p class="muted">{{ project.award.source }}</p>
-            </div>
-          </div>
-        {% endif %}
       </a>
     {% endfor %}
   </div>
